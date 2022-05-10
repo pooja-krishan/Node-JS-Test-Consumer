@@ -34,4 +34,9 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.sequelize.sync( {force : false} )
+.then(() => {
+    console.log("Sync is complete");
+});       //Does not drop tables while restarting nodemon
+
 module.exports = db;

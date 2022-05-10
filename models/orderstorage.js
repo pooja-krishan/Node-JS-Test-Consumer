@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   orderStorage.init({
-    id: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER,
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
